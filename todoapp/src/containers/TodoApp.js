@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import TodoApp from '../components/TodoApp';
-import { addTodo } from '../redux/todo';
+import { addTodo, setTodo } from '../redux/todo';
 
 const mapStateToProps = (state) => {
   return {
@@ -9,7 +9,8 @@ const mapStateToProps = (state) => {
 }
 
 const mapActionsToProps = {
-  addTodo
+  addTodo,
+  setTodo
 }
 
 export default connect(mapStateToProps, mapActionsToProps)(TodoApp);
